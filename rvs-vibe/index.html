@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RVS VIBE 2026 — Connect. Compete. Create.</title>
+  <meta name="description" content="RVS VIBE 2026 — The next-generation college festival where technology, creativity and entertainment meet. 12 Events, 1000+ Students, 24 Hours." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       CURSOR GLOW
+  ═══════════════════════════════════════ -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand">
+        <img src="rvs-logo.jpg" alt="RVS Logo" class="nav-logo-img" />
+        <span class="brand-text"><span class="brand-vibe">RVS</span><span class="brand-accent">VIBE</span></span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home"     class="nav-link">Home</a></li>
+        <li><a href="#events"   class="nav-link">Events</a></li>
+        <li><a href="#schedule" class="nav-link">Schedule</a></li>
+        <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="#register" class="btn-nav-cta">Register Now</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section class="hero" id="home">
+
+    <!-- Campus Background Image -->
+    <div class="hero-bg-photo" style="background-image: url('campus-bg.webp');" aria-hidden="true"></div>
+    <div class="hero-bg-overlay" aria-hidden="true"></div>
+
+    <!-- Animated background canvas -->
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+
+    <!-- Glowing Logo Watermark Emblem floating in background -->
+    <div class="hero-logo-watermark" aria-hidden="true">
+      <img src="rvs-logo.jpg" alt="RVS Crest Watermark" />
+    </div>
+
+    <!-- Background orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- Giant ghost text -->
+    <div class="ghost-text" aria-hidden="true">VIBE</div>
+
+    <div class="hero-content">
+      <!-- Badge -->
+      <div class="hero-badge" data-reveal>
+        <span class="badge-star">✦</span>
+        24 HOURS &nbsp;•&nbsp; 12 EVENTS &nbsp;•&nbsp; 1000+ STUDENTS
+      </div>
+
+      <!-- Main heading -->
+      <div class="hero-title-block" data-reveal data-delay="100">
+        <p class="hero-pre">RVS VIBE 2026</p>
+        <h1 class="hero-title">
+          THE CAMPUS<br />
+          <span class="hero-title-accent">COMES ALIVE.</span>
+        </h1>
+      </div>
+
+      <p class="hero-tagline" data-reveal data-delay="200">
+        Connect.&ensp;Compete.&ensp;Create.
+      </p>
+
+      <p class="hero-desc" data-reveal data-delay="300">
+        A next-generation college festival where technology,<br class="br-hide" />
+        creativity and entertainment collide.
+      </p>
+
+      <div class="hero-actions" data-reveal data-delay="400">
+        <a href="#events"   class="btn btn-primary">Explore Events</a>
+        <a href="#register" class="btn btn-ghost">Register Now</a>
+      </div>
+    </div>
+
+    <!-- Floating geometric shapes -->
+    <div class="geo geo-1"></div>
+    <div class="geo geo-2"></div>
+    <div class="geo geo-3"></div>
+    <div class="geo geo-4"></div>
+    <div class="geo geo-5"></div>
+
+    <!-- Scroll cue -->
+    <div class="scroll-cue">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       STATS BAR
+  ═══════════════════════════════════════ -->
+  <section class="stats-bar" id="statsBar">
+    <div class="stats-inner">
+      <div class="stat-item" data-reveal>
+        <span class="stat-num" data-target="12">0</span><span class="stat-sym">+</span>
+        <span class="stat-lbl">Events</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item" data-reveal data-delay="100">
+        <span class="stat-num" data-target="1000">0</span><span class="stat-sym">+</span>
+        <span class="stat-lbl">Participants</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item" data-reveal data-delay="200">
+        <span class="stat-num" data-target="24">0</span>
+        <span class="stat-lbl">Hours</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item" data-reveal data-delay="300">
+        <span class="stat-num" data-target="15">0</span><span class="stat-sym">+</span>
+        <span class="stat-lbl">Prizes</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       EVENTS SECTION
+  ═══════════════════════════════════════ -->
+  <section class="section events-section" id="events">
+    <div class="container">
+
+      <div class="section-label" data-reveal>
+        <span class="label-line"></span> What's On
+      </div>
+      <h2 class="section-heading" data-reveal data-delay="100">
+        CHOOSE YOUR<br /><em>BATTLE.</em>
+      </h2>
+
+      <div class="events-grid">
+
+        <!-- Event 01 -->
+        <article class="ev-card" data-reveal data-delay="0" style="--c1:#6366f1;--c2:#a855f7">
+          <div class="ev-num">01</div>
+          <div class="ev-icon">
+            <svg viewBox="0 0 64 64" fill="none"><rect x="8" y="8" width="48" height="48" rx="8" stroke="currentColor" stroke-width="2"/><path d="M22 26l-6 6 6 6M42 26l6 6-6 6M35 20l-6 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="ev-name">Code Clash</h3>
+          <p class="ev-desc">Solve real-world algorithmic challenges under fire. Individual &amp; team rounds.</p>
+          <div class="ev-meta">
+            <span>🗓 Oct 12</span>
+            <span>⏱ 10:00 AM</span>
+            <span class="ev-prize">₹25,000</span>
+          </div>
+          <a href="#register" class="ev-btn">Register <span>→</span></a>
+        </article>
+
+        <!-- Event 02 -->
+        <article class="ev-card" data-reveal data-delay="80" style="--c1:#f59e0b;--c2:#ef4444">
+          <div class="ev-num">02</div>
+          <div class="ev-icon">
+            <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="22" stroke="currentColor" stroke-width="2"/><path d="M32 20v4M32 40v4M20 32h4M40 32h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="32" cy="32" r="6" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3 class="ev-name">Quiz Arena</h3>
+          <p class="ev-desc">Brain-blasting rapid-fire quizzes on tech, science, pop culture &amp; more.</p>
+          <div class="ev-meta">
+            <span>🗓 Oct 12</span>
+            <span>⏱ 12:00 PM</span>
+            <span class="ev-prize">₹10,000</span>
+          </div>
+          <a href="#register" class="ev-btn">Register <span>→</span></a>
+        </article>
+
+        <!-- Event 03 -->
+        <article class="ev-card" data-reveal data-delay="160" style="--c1:#10b981;--c2:#06b6d4">
+          <div class="ev-num">03</div>
+          <div class="ev-icon">
+            <svg viewBox="0 0 64 64" fill="none"><path d="M32 12l4 8h8l-6 6 2 8-8-5-8 5 2-8-6-6h8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M16 44l4-8M48 44l-4-8M32 44v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="ev-name">Treasure Hunt</h3>
+          <p class="ev-desc">Cryptic clues, campus wide chaos. Decode, find, and claim victory.</p>
+          <div class="ev-meta">
+            <span>🗓 Oct 13</span>
+            <span>⏱ 9:00 AM</span>
+            <span class="ev-prize">₹8,000</span>
+          </div>
+          <a href="#register" class="ev-btn">Register <span>→</span></a>
+        </article>
+
+        <!-- Event 04 -->
+        <article class="ev-card" data-reveal data-delay="0" style="--c1:#3b82f6;--c2:#6366f1">
+          <div class="ev-num">04</div>
+          <div class="ev-icon">
+            <svg viewBox="0 0 64 64" fill="none"><rect x="10" y="18" width="44" height="28" rx="4" stroke="currentColor" stroke-width="2"/><path d="M22 30h4M30 26v8M40 30h4M36 28l2 4-2 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="ev-name">BGMI Battle</h3>
+          <p class="ev-desc">Squadrons compete for dominance. Last team standing wins the crown.</p>
+          <div class="ev-meta">
+            <span>🗓 Oct 13</span>
+            <span>⏱ 2:00 PM</span>
+            <span class="ev-prize">₹15,000</span>
+          </div>
+          <a href="#register" class="ev-btn">Register <span>→</span></a>
+        </article>
+
+        <!-- Event 05 -->
+        <article class="ev-card" data-reveal data-delay="80" style="--c1:#ec4899;--c2:#f43f5e">
+          <div class="ev-num">05</div>
+          <div class="ev-icon">
+            <svg viewBox="0 0 64 64" fill="none"><path d="M12 16a4 4 0 014-4h32a4 4 0 014 4v24a4 4 0 01-4 4H16a4 4 0 01-4-4V16z" stroke="currentColor" stroke-width="2"/><circle cx="26" cy="28" r="6" stroke="currentColor" stroke-width="2"/><path d="M38 22l8 10-8 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="ev-name">Photography</h3>
+          <p class="ev-desc">Capture the soul of the fest. Theme: "Motion &amp; Stillness". Submit your best.</p>
+          <div class="ev-meta">
+            <span>🗓 Oct 14</span>
+            <span>⏱ 8:00 AM</span>
+            <span class="ev-prize">₹7,000</span>
+          </div>
+          <a href="#register" class="ev-btn">Register <span>→</span></a>
+        </article>
+
+        <!-- Event 06 -->
+        <article class="ev-card" data-reveal data-delay="160" style="--c1:#a855f7;--c2:#ec4899">
+          <div class="ev-num">06</div>
+          <div class="ev-icon">
+            <svg viewBox="0 0 64 64" fill="none"><rect x="14" y="18" width="36" height="24" rx="3" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="30" r="5" stroke="currentColor" stroke-width="2"/><path d="M20 48l4-6h16l4 6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="ev-name">Short Film</h3>
+          <p class="ev-desc">Tell a story in 5 minutes. Showcase your vision, script, and cinematic flair.</p>
+          <div class="ev-meta">
+            <span>🗓 Oct 14</span>
+            <span>⏱ 11:00 AM</span>
+            <span class="ev-prize">₹12,000</span>
+          </div>
+          <a href="#register" class="ev-btn">Register <span>→</span></a>
+        </article>
+
+        <!-- Event 07 -->
+        <article class="ev-card" data-reveal data-delay="0" style="--c1:#f59e0b;--c2:#10b981">
+          <div class="ev-num">07</div>
+          <div class="ev-icon">
+            <svg viewBox="0 0 64 64" fill="none"><path d="M20 44c0-8 4-14 12-18s12-10 12-18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M32 8c0 8-4 14-12 18S8 36 8 44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M16 52h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="ev-name">Dance Battle</h3>
+          <p class="ev-desc">Solo &amp; crew battles. Hip-hop, freestyle, fusion — own the floor.</p>
+          <div class="ev-meta">
+            <span>🗓 Oct 15</span>
+            <span>⏱ 4:00 PM</span>
+            <span class="ev-prize">₹18,000</span>
+          </div>
+          <a href="#register" class="ev-btn">Register <span>→</span></a>
+        </article>
+
+        <!-- Event 08 -->
+        <article class="ev-card" data-reveal data-delay="80" style="--c1:#06b6d4;--c2:#3b82f6">
+          <div class="ev-num">08</div>
+          <div class="ev-icon">
+            <svg viewBox="0 0 64 64" fill="none"><path d="M12 40c4-12 8-20 20-24 12 4 16 12 20 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><ellipse cx="32" cy="42" rx="10" ry="4" stroke="currentColor" stroke-width="2"/><path d="M24 32c2-4 4-6 8-8 4 2 6 4 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="ev-name">Battle of Bands</h3>
+          <p class="ev-desc">Rock it. Strum it. Own it. Bring your band and play your way to the top.</p>
+          <div class="ev-meta">
+            <span>🗓 Oct 15</span>
+            <span>⏱ 7:00 PM</span>
+            <span class="ev-prize">₹20,000</span>
+          </div>
+          <a href="#register" class="ev-btn">Register <span>→</span></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FEATURED EVENT
+  ═══════════════════════════════════════ -->
+  <section class="featured-section" id="featured">
+    <div class="featured-bg"></div>
+    <div class="featured-orb feat-orb-1"></div>
+    <div class="featured-orb feat-orb-2"></div>
+
+    <div class="featured-inner container">
+      <div class="feat-left" data-reveal>
+        <span class="feat-tag">⚡ Main Event</span>
+        <p class="feat-pre">THE MAIN EVENT</p>
+        <h2 class="feat-title">CODE CLASH<br /><span>2026</span></h2>
+        <p class="feat-desc">
+          The ultimate programming showdown. Compete individually or in pairs across three elimination rounds. Problems designed by industry engineers.
+        </p>
+        <a href="#register" class="btn btn-primary btn-large">JOIN THE BATTLE →</a>
+      </div>
+
+      <div class="feat-right" data-reveal data-delay="150">
+        <div class="feat-card-group">
+          <div class="feat-info-card">
+            <span class="fic-icon">🏆</span>
+            <span class="fic-val">₹25,000</span>
+            <span class="fic-lbl">Prize Pool</span>
+          </div>
+          <div class="feat-info-card">
+            <span class="fic-icon">📅</span>
+            <span class="fic-val">Oct 12</span>
+            <span class="fic-lbl">Date</span>
+          </div>
+          <div class="feat-info-card">
+            <span class="fic-icon">⏰</span>
+            <span class="fic-val">10 AM</span>
+            <span class="fic-lbl">Start Time</span>
+          </div>
+          <div class="feat-info-card">
+            <span class="fic-icon">👥</span>
+            <span class="fic-val">2–4</span>
+            <span class="fic-lbl">Team Size</span>
+          </div>
+        </div>
+        <div class="feat-code-block" aria-hidden="true">
+          <div class="code-line"><span class="c-kw">function</span> <span class="c-fn">solve</span>(<span class="c-pr">n</span>) {</div>
+          <div class="code-line pl">&nbsp;&nbsp;<span class="c-kw">let</span> result = <span class="c-num">0</span>;</div>
+          <div class="code-line pl">&nbsp;&nbsp;<span class="c-kw">for</span> (<span class="c-kw">let</span> i = <span class="c-num">0</span>; i &lt; n; i++)</div>
+          <div class="code-line pl">&nbsp;&nbsp;&nbsp;&nbsp;result += i * i;</div>
+          <div class="code-line pl">&nbsp;&nbsp;<span class="c-kw">return</span> result;</div>
+          <div class="code-line">}</div>
+          <div class="code-cursor"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       EVENT TIMELINE
+  ═══════════════════════════════════════ -->
+  <section class="section schedule-section" id="schedule">
+    <div class="container">
+      <div class="section-label" data-reveal>
+        <span class="label-line"></span> Day by Day
+      </div>
+      <h2 class="section-heading" data-reveal data-delay="100">
+        THE <em>SCHEDULE.</em>
+      </h2>
+
+      <div class="timeline-wrap">
+        <div class="tl-line"></div>
+
+        <div class="tl-item tl-left" data-reveal>
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-time">09:00 AM</span>
+            <h4 class="tl-title">Opening Ceremony</h4>
+            <p class="tl-desc">Inauguration with chief guest address, lamp lighting &amp; spectacular drone show.</p>
+            <span class="tl-venue">📍 Main Auditorium</span>
+          </div>
+        </div>
+
+        <div class="tl-item tl-right" data-reveal data-delay="100">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-time">10:00 AM</span>
+            <h4 class="tl-title">Code Clash</h4>
+            <p class="tl-desc">Three elimination rounds. Algorithms, data structures &amp; logic puzzles.</p>
+            <span class="tl-venue">📍 Computer Lab Block</span>
+          </div>
+        </div>
+
+        <div class="tl-item tl-left" data-reveal data-delay="200">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-time">12:00 PM</span>
+            <h4 class="tl-title">Quiz Arena</h4>
+            <p class="tl-desc">Prelims and grand finale. Top 10 teams fight for the buzzer-round crown.</p>
+            <span class="tl-venue">📍 Seminar Hall</span>
+          </div>
+        </div>
+
+        <div class="tl-item tl-right" data-reveal data-delay="300">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-time">02:00 PM</span>
+            <h4 class="tl-title">BGMI Battle</h4>
+            <p class="tl-desc">Squad tournaments on the big screen. Live-streamed to the whole campus.</p>
+            <span class="tl-venue">📍 E-Sports Arena</span>
+          </div>
+        </div>
+
+        <div class="tl-item tl-left" data-reveal data-delay="400">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-time">04:00 PM</span>
+            <h4 class="tl-title">Treasure Hunt</h4>
+            <p class="tl-desc">Campus-wide adventure. Cryptic clues lead teams across hidden checkpoints.</p>
+            <span class="tl-venue">📍 Full Campus</span>
+          </div>
+        </div>
+
+        <div class="tl-item tl-right" data-reveal data-delay="500">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-time">06:00 PM</span>
+            <h4 class="tl-title">Cultural Night</h4>
+            <p class="tl-desc">Dance Battle &amp; Battle of Bands. The most electrifying night of the year.</p>
+            <span class="tl-venue">📍 Open Air Stage</span>
+          </div>
+        </div>
+
+        <div class="tl-item tl-left" data-reveal data-delay="600">
+          <div class="tl-dot tl-dot-final"></div>
+          <div class="tl-card tl-card-final">
+            <span class="tl-time">08:00 PM</span>
+            <h4 class="tl-title">Prize Distribution 🏆</h4>
+            <p class="tl-desc">Winners take the stage. Certificates, trophies &amp; unforgettable moments.</p>
+            <span class="tl-venue">📍 Main Auditorium</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════ -->
+  <section class="about-section" id="about">
+    <div class="about-bg-text" aria-hidden="true">VIBE</div>
+
+    <div class="container about-grid">
+      <div class="about-left" data-reveal>
+        <h2 class="about-big-text">
+          MORE THAN<br />
+          <span>AN EVENT.</span><br />
+          IT'S AN<br />
+          <span class="accent-text">EXPERIENCE.</span>
+        </h2>
+      </div>
+
+      <div class="about-right" data-reveal data-delay="150">
+        <p class="about-desc">
+          RVS VIBE 2026 is the flagship annual college festival of <strong>RVS College of Arts &amp; Science</strong>, Coimbatore — an event that transcends the ordinary. We believe every student has a spark waiting to ignite.
+        </p>
+        <p class="about-desc">
+          From high-stakes coding competitions to electrifying cultural performances, VIBE is where ambitions meet opportunities, and memories are made that last a lifetime.
+        </p>
+
+        <div class="about-badges">
+          <span class="about-badge"><span class="ab-star">✦</span> Innovation</span>
+          <span class="about-badge"><span class="ab-star">✦</span> Creativity</span>
+          <span class="about-badge"><span class="ab-star">✦</span> Competition</span>
+          <span class="about-badge"><span class="ab-star">✦</span> Entertainment</span>
+        </div>
+
+        <div class="about-numbers">
+          <div class="an-item">
+            <strong>2026</strong>
+            <span>Edition</span>
+          </div>
+          <div class="an-item">
+            <strong>RVS</strong>
+            <span>College</span>
+          </div>
+          <div class="an-item">
+            <strong>CBE</strong>
+            <span>Location</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       GALLERY
+  ═══════════════════════════════════════ -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-label" data-reveal>
+        <span class="label-line"></span> Highlights
+      </div>
+      <h2 class="section-heading" data-reveal data-delay="100">
+        LAST YEAR'S <em>MOMENTS.</em>
+      </h2>
+
+      <div class="gallery-grid" data-reveal data-delay="200">
+        <div class="g-item g-big" style="--gc1:#6366f1;--gc2:#a855f7">
+          <div class="g-overlay"></div>
+          <div class="g-content">
+            <span class="g-icon">🎤</span>
+            <span class="g-label">Cultural Night 2025</span>
+          </div>
+        </div>
+        <div class="g-item g-tall" style="--gc1:#f59e0b;--gc2:#ef4444">
+          <div class="g-overlay"></div>
+          <div class="g-content">
+            <span class="g-icon">💻</span>
+            <span class="g-label">Code Clash Finals</span>
+          </div>
+        </div>
+        <div class="g-item g-sm" style="--gc1:#10b981;--gc2:#06b6d4">
+          <div class="g-overlay"></div>
+          <div class="g-content">
+            <span class="g-icon">🏆</span>
+            <span class="g-label">Prize Ceremony</span>
+          </div>
+        </div>
+        <div class="g-item g-sm" style="--gc1:#ec4899;--gc2:#f43f5e">
+          <div class="g-overlay"></div>
+          <div class="g-content">
+            <span class="g-icon">📸</span>
+            <span class="g-label">Photography</span>
+          </div>
+        </div>
+        <div class="g-item g-wide" style="--gc1:#3b82f6;--gc2:#6366f1">
+          <div class="g-overlay"></div>
+          <div class="g-content">
+            <span class="g-icon">🎮</span>
+            <span class="g-label">Gaming Arena</span>
+          </div>
+        </div>
+        <div class="g-item g-sm" style="--gc1:#a855f7;--gc2:#ec4899">
+          <div class="g-overlay"></div>
+          <div class="g-content">
+            <span class="g-icon">🎶</span>
+            <span class="g-label">Battle of Bands</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       REGISTRATION
+  ═══════════════════════════════════════ -->
+  <section class="section register-section" id="register">
+    <div class="reg-bg-orb"></div>
+
+    <div class="container register-grid">
+      <div class="reg-left" data-reveal>
+        <div class="section-label">
+          <span class="label-line"></span> Join Us
+        </div>
+        <h2 class="reg-heading">
+          READY TO<br />
+          <span class="gradient-text">JOIN THE</span><br />
+          VIBE?
+        </h2>
+        <p class="reg-sub">Fill in your details and secure your spot at the biggest college festival of 2026.</p>
+        <div class="reg-info-list">
+          <div class="reg-info-item">
+            <span class="ri-icon">📅</span>
+            <span>Oct 12 – 15, 2026</span>
+          </div>
+          <div class="reg-info-item">
+            <span class="ri-icon">📍</span>
+            <span>RVS College, Sulur, Coimbatore</span>
+          </div>
+          <div class="reg-info-item">
+            <span class="ri-icon">🎟</span>
+            <span>Free Entry — Just Register</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reg-right" data-reveal data-delay="150">
+        <div class="reg-form-card">
+          <form id="regForm" novalidate>
+            <div class="f-row">
+              <div class="f-group">
+                <label for="regName">Full Name</label>
+                <input type="text" id="regName" placeholder="e.g. Priya Rajan" />
+                <span class="f-err" id="errName"></span>
+              </div>
+            </div>
+            <div class="f-row">
+              <div class="f-group">
+                <label for="regEmail">Email Address</label>
+                <input type="email" id="regEmail" placeholder="you@rvscas.ac.in" />
+                <span class="f-err" id="errEmail"></span>
+              </div>
+            </div>
+            <div class="f-row two-col">
+              <div class="f-group">
+                <label for="regPhone">Phone</label>
+                <input type="tel" id="regPhone" placeholder="9876543210" />
+                <span class="f-err" id="errPhone"></span>
+              </div>
+              <div class="f-group">
+                <label for="regYear">Year</label>
+                <select id="regYear">
+                  <option value="" disabled selected>Select</option>
+                  <option>1st Year</option>
+                  <option>2nd Year</option>
+                  <option>3rd Year</option>
+                  <option>PG 1st Year</option>
+                  <option>PG 2nd Year</option>
+                </select>
+                <span class="f-err" id="errYear"></span>
+              </div>
+            </div>
+            <div class="f-row">
+              <div class="f-group">
+                <label for="regDept">Department</label>
+                <select id="regDept">
+                  <option value="" disabled selected>Select Department</option>
+                  <option>MCA</option><option>BCA</option>
+                  <option>B.Sc CS</option><option>B.Sc IT</option>
+                  <option>B.Com</option><option>BBA</option>
+                  <option>M.Sc CS</option><option>Other</option>
+                </select>
+                <span class="f-err" id="errDept"></span>
+              </div>
+            </div>
+            <div class="f-row">
+              <div class="f-group">
+                <label for="regEvent">Select Event</label>
+                <select id="regEvent">
+                  <option value="" disabled selected>Choose your event</option>
+                  <option>Code Clash</option>
+                  <option>Quiz Arena</option>
+                  <option>Treasure Hunt</option>
+                  <option>BGMI Battle</option>
+                  <option>Photography</option>
+                  <option>Short Film</option>
+                  <option>Dance Battle</option>
+                  <option>Battle of Bands</option>
+                </select>
+                <span class="f-err" id="errEvent"></span>
+              </div>
+            </div>
+            <button type="submit" class="btn-register" id="regBtn">
+              <span class="reg-btn-text">REGISTER NOW →</span>
+              <span class="reg-spinner" id="regSpinner"></span>
+            </button>
+          </form>
+
+          <!-- Success -->
+          <div class="reg-success" id="regSuccess">
+            <div class="rs-emoji">🎉</div>
+            <h3>Registration Successful!</h3>
+            <p>See you at <strong>RVS VIBE 2026</strong>.<br />Check your inbox for confirmation details.</p>
+            <button class="btn btn-ghost" id="regAgain">Register Another →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════ -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-label" data-reveal>
+        <span class="label-line"></span> Find Us
+      </div>
+      <h2 class="section-heading" data-reveal data-delay="100">
+        GET IN <em>TOUCH.</em>
+      </h2>
+
+      <div class="contact-grid" data-reveal data-delay="200">
+        <div class="contact-big-card">
+          <div class="cbc-globe">🏛</div>
+          <div class="cbc-body">
+            <h3>RVS College of Arts &amp; Science</h3>
+            <p>Sulur, Coimbatore – 641402</p>
+            <p>Tamil Nadu, India</p>
+            <div class="cbc-map-pill">
+              <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M10 2a6 6 0 00-6 6c0 4 6 10 6 10s6-6 6-10a6 6 0 00-6-6zm0 8a2 2 0 110-4 2 2 0 010 4z"/></svg>
+              View on Maps
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-cards-col">
+          <div class="c-card">
+            <span class="c-card-icon">📧</span>
+            <div>
+              <span class="c-card-lbl">Email</span>
+              <a href="mailto:vibefest@rvscas.ac.in" class="c-card-val">vibefest@rvscas.ac.in</a>
+            </div>
+          </div>
+          <div class="c-card">
+            <span class="c-card-icon">📞</span>
+            <div>
+              <span class="c-card-lbl">Phone</span>
+              <a href="tel:+914222687421" class="c-card-val">+91 422 268 7421</a>
+            </div>
+          </div>
+          <div class="c-card">
+            <span class="c-card-icon">📸</span>
+            <div>
+              <span class="c-card-lbl">Instagram</span>
+              <a href="#" class="c-card-val">@rvsvibe2026</a>
+            </div>
+          </div>
+          <div class="c-card">
+            <span class="c-card-icon">💼</span>
+            <div>
+              <span class="c-card-lbl">LinkedIn</span>
+              <a href="#" class="c-card-val">RVS VIBE Official</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="footer-orb"></div>
+    <div class="container footer-inner">
+      <div class="footer-big-text" aria-hidden="true">
+        <span>RVS</span><span class="fbt-accent">VIBE</span>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col footer-brand-col">
+          <div class="footer-brand-header">
+            <img src="rvs-logo.jpg" alt="RVS Logo" class="footer-logo-img" />
+            <span class="footer-logo">RVS<span>VIBE</span></span>
+          </div>
+          <p class="footer-tagline">Connect. Compete. Create.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram" class="fsoc">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter" class="fsoc">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="fsoc">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="fsoc">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#register">Register</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Events</h4>
+          <ul>
+            <li><a href="#events">Code Clash</a></li>
+            <li><a href="#events">Quiz Arena</a></li>
+            <li><a href="#events">BGMI Battle</a></li>
+            <li><a href="#events">Dance Battle</a></li>
+            <li><a href="#events">Battle of Bands</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>Sulur, Coimbatore</li>
+            <li><a href="mailto:vibefest@rvscas.ac.in">vibefest@rvscas.ac.in</a></li>
+            <li><a href="tel:+914222687421">+91 422 268 7421</a></li>
+            <li>Oct 12 – 15, 2026</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 RVS VIBE. All rights reserved. &nbsp;|&nbsp; Made with 🔥 by MCA Department.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
